@@ -1,1 +1,1 @@
-#LUT Parser & Editor Tool by Mikhail Leon
+#code LUT Parser & Editor Tool by Mikhail Leon
