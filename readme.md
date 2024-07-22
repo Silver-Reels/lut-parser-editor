@@ -1,10 +1,9 @@
 # LUT Parser & Editor Tool by Mikhail Leon
 
-This standalone tool creates, views, modifies and saves **generic** LUT files, with added visual support through a graph & table environment. It supports comments and positive float numbers.
+This standalone tool creates, loads, views, modifies and saves **generic** LUT files, with added visual support through a graph & table environment. It supports comments and positive float numbers.
 
-## Video demonstration
+## Demo Video
 https://github.com/user-attachments/assets/45ecfc5c-e811-48aa-b6c1-13aa7fc4178e
-
 
 *Note: Reference image obtained from [Edmunds](https://www.edmunds.com/car-reviews/track-tests/2012-lexus-lfa-dyno-tested.html). Music is 'Girl from Petaluma' by Cocktail Shakers.*
 
@@ -29,7 +28,7 @@ Due to the use case, the tool will assume the constraint of moving linearly from
 
 It is used for any process that wants to easily store & quickly access a 2D mathematical relationship **x --> y**. Think of a graph - you have the **x** points, but you want to find the **y** points for any given **x**. The relationship is defined by placement of known data points; as such, its nature can be arbitrary and is not bound to a single expression, such as a [polynomial](https://en.wikipedia.org/wiki/Polynomial) or [trigonometric](https://en.wikipedia.org/wiki/Trigonometric_functions) expression. It is defined instead by the placement of known data.
 
-This can be useful for storing any 2D graph, such as a car engine's torque curve, usually obtained in real-life by getting [dyno](https://en.wikipedia.org/wiki/Dynamometer) data. This data can then be used to help create accurate simulations of an engine in a driving simulator, or to represent *any* other known physical relationship in vehicle dynamics. The relationships can even be chained to get multidimensional (3D or higher) information.
+This can be useful for storing any 2D graph, such as a car engine's torque curve, usually obtained in real-life by getting [dyno](https://en.wikipedia.org/wiki/Dynamometer) data. This data can then be used to help create accurate simulations of an engine in a driving simulator, or to represent *any* other known physical relationship in vehicle dynamics. The relationships can even be chained to get multidimensional (3D or higher) information. The video demonstration shows the creation of a LUT representing the RPM-to-horsepower curve of a [Lexus LFA](https://en.wikipedia.org/wiki/Lexus_LFA) (at 100% throttle).
 
 ![If You Understand Volumetric Efficiency You Understand Engines 6-31 screenshot](https://github.com/user-attachments/assets/5926cd52-32cc-495a-bd9b-812e7d6adbf3)
 
@@ -43,7 +42,7 @@ The tool can load in reference images, either from a local path on the user's de
 
 That depends on the software that is interpreting the data. Generally, some interpolation will be performed by using known adjacent values. The tool offers 3 of the most common modes for visualizing such interpolation:
 
-**None**, **Cubic** and **Linear**.
-
 ![interpolation-visualized](https://github.com/user-attachments/assets/039ef647-9107-4a08-8d14-0ae29ee881d8)
 *Note: the '**Cubic**' interpolation here is more specifically a [Catmull-Rom Spline (Centripetal)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline), which guarantees a curve to smoothly move through all points, unlike a standard [Bézier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).*
+
+Finally, the tool will your data as a LUT file. The repository contains `example-lfa-horsepower.lut` with the same data that was created during the Demo Video, which can easily be loaded in again.
