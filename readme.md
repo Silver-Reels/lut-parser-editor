@@ -28,9 +28,9 @@ Due to the use case, the tool will assume the constraint of moving linearly from
 
 ## What is a LUT used for?
 
-It is used for any process that wants to easily store & quickly access a 2D mathematical relationship **x --> y**. Think of a graph - you have the **x** points, but you want to find the **y** points for any given **x**. The relationship is defined by placement of known data points; as such, its nature can be arbitrary and is not bound to a single expression, such as a [polynomial](https://en.wikipedia.org/wiki/Polynomial) or [trigonometric](https://en.wikipedia.org/wiki/Trigonometric_functions) expression. It is defined instead by the placement of known data.
+It is used for any process that wants to easily store & quickly access a 2D mathematical relationship **x --> y**. Think of a graph - you have the **x** points, but you want to find the **y** points for any given **x**. The relationship is defined by placement of known data points; as such, its nature can be arbitrary and not bound by a single mathematical formula, such as a [polynomial](https://en.wikipedia.org/wiki/Polynomial) or [trigonometric](https://en.wikipedia.org/wiki/Trigonometric_functions) expression.
 
-This can be useful for storing any 2D graph, such as a car engine's torque curve, usually obtained in real-life by getting [dyno](https://en.wikipedia.org/wiki/Dynamometer) data. This data can then be used to help create accurate simulations of an engine in a driving simulator, or to represent *any* other known physical relationship in vehicle dynamics. The relationships can even be chained to get multidimensional (3D or higher) information.
+This method can be useful for storing *any* 2D graph, such as a car engine's torque curve - usually obtained in real-life by recording [dyno](https://en.wikipedia.org/wiki/Dynamometer) data. Such data can then be used to help create accurate simulations of an engine in a driving simulator, or to represent *any* other known physical relationship in vehicle dynamics. The relationships can even be chained to get multidimensional (3D or higher) information.
 
 ![If You Understand Volumetric Efficiency You Understand Engines 6-31 screenshot](https://github.com/user-attachments/assets/5926cd52-32cc-495a-bd9b-812e7d6adbf3)
 
@@ -38,9 +38,11 @@ Another popular example is color LUTs that [color-grade](https://en.wikipedia.or
 
 ![lut-example](https://github.com/user-attachments/assets/9f06ba11-9a68-4301-8a2a-313659b2fe80)
 
+The prevalence of LUTs and their utility is immense.
+
 The tool can load in reference images, either from a local path on the user's device, or from a URL, but the host of the image must allow 'anonymous' fetching (for example, images hosted on Twitter currently allow this, but not all hosts will). There are a few controls to help align references correctly, but it's preferable this be done externally ahead of time.
 
-The tool was originally designed to be compatible with [Assetto Corsa](https://en.wikipedia.org/wiki/Assetto_Corsa).
+The tool was originally designed to be compatible with [Assetto Corsa](https://en.wikipedia.org/wiki/Assetto_Corsa)'s LUT files.
 
 ## What happens to the values inbetween that were not defined?
 
@@ -49,4 +51,4 @@ That depends on the software that is interpreting the data. Generally, some inte
 ![interpolation-visualized](https://github.com/user-attachments/assets/039ef647-9107-4a08-8d14-0ae29ee881d8)
 *Note: the '**Cubic**' interpolation here is more specifically a [Catmull-Rom Spline (Centripetal)](https://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline), which guarantees a curve to smoothly move through all points, unlike a standard [Bézier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve).*
 
-Finally, the tool will your data as a LUT file. The repository contains `example-lfa-horsepower.lut` with the same data that was created during the Demo Video, which can easily be loaded in again.
+Finally, the tool can save your data as a LUT file. The repository contains `example-lfa-horsepower.lut` with the same data that was created during the Demo Video, which can easily be loaded in again.
