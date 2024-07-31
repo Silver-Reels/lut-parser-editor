@@ -22,6 +22,9 @@ The **table** is a more straightforward way to create, modify & delete **data** 
 
 The **parsing** functionality is completely bespoke & interprets the **.LUT file** as an **8-bit buffer**. Comments begin with a `;` and end with a `\n`. Global comments (comments not attached to any point) are sorted to the top. Key-value pairs are numbers (decimal points can be included) separated by a `|` and are sorted in ascending **x** (key) value.
 
+![Code_tBZHbwtcZn](https://github.com/user-attachments/assets/ba45feb9-025c-405e-a7bb-a1e459d6284d)
+*A portion of the parsing code.*
+
 ## What is a LUT?
 
 A LUT is a generic [lookup table](https://en.wikipedia.org/wiki/Lookup_table) file. It is a simple method of storing a relationship between one value and another (in this case, **x** and **y**), not dissimilar to an array or hashmap.
