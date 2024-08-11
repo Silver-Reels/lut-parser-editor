@@ -2,7 +2,9 @@
 
 This standalone tool creates, loads, views, modifies and saves **generic** LUT files, with added visual support through a graph & table environment. It supports comments and positive float numbers.
 
-`lut-parser-editor-portable.html`
+`lut-parser-editor-portable.html` - the tool (no dependencies or additional files necessary)
+
+`lut-parser-editor.js` - the source code
 
 Originally designed for compatibility with **.lut** files in [Assetto Corsa](https://en.wikipedia.org/wiki/Assetto_Corsa).
 
