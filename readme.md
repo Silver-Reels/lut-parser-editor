@@ -19,7 +19,7 @@ Here is a simplified diagram.
 > [!TIP]
 > The **data** in **green** cannot be directly changed, but the other modules act as derivatives of it & interfaces for manipulating it.
 
-![diagram](https://github.com/user-attachments/assets/a04c8d16-b521-46f1-af82-366ff9683058)
+![diagram](https://github.com/user-attachments/assets/7190207a-e3d6-4450-b672-8ed0353d7d20)
 
 
 The **points** and the **curves** of the **graph** are created in 2 separate steps. The **points** are interactive `div` elements (click, drag) and will modify the **data** (and thus, also the **table**). The **curves** are dynamically drawn pixel-by-pixel in a `canvas` element that mathematically determines the curves' position based on given parameters (interpolation mode, coordinates of adjacent points).
